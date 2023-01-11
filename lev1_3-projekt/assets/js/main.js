@@ -1,3 +1,5 @@
+// mit eventlistener
+/* 
 let plusOne = document.getElementById("plusOne");
 let minusOne = document.getElementById("minusOne");
 let plusTen = document.getElementById("plusTen");
@@ -35,3 +37,28 @@ double.addEventListener("click", function multiplyByTwo() {
 reset.addEventListener("click", function reset() {
   currentString.innerHTML = 0;
 });
+ */
+
+//kürzer und mit onclick
+
+let currentValue = document.querySelector("p");
+
+// String muss in Nummer umgewandelt werden
+// function calc(num) {
+//   currentValue.innerHTML = parseFloat(currentValue.innerHTML) + num;
+// }
+
+const calc = (num) =>
+  (currentValue.innerHTML = parseFloat(currentValue.innerHTML) + num);
+
+// function double() {
+//   // currentValue.innerHTML *= 2;
+// }
+
+const double = () => (currentValue.innerHTML *= 2);
+
+// function reset() {
+//   currentValue.innerHTML = 0;
+// }
+
+const reset = () => (currentValue.innerHTML = 0);
